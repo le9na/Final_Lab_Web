@@ -1,0 +1,23 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block title %} List of Games {% endblock title %}
+
+{% block content %} 
+
+<h2 class="index_header">List of games</h2>
+
+<table>
+    <tr>
+        <th>Game</th>
+        <th>Developer</th>
+    </tr>
+    {% for game in games %}
+    <tr>
+        <td> {{ game.title }}</td>
+        <td> {{ game.developer }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}
